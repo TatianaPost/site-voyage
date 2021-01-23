@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Travel Landing Page Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+    <section>
+        <header>
+            <a class="logo" href="#">Voyage</a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+        </header>
+        <div class="content">
+            <h2>Voyage de<br><br><br><br><br><br><br><br><br><br>Rêve</h2>
+        </div>
+        <div class="play" onclick="videoToggle();">
+            <img src="./images/play.png" alt="image"><span>Play Video</span>
+        </div>
+        <ul class="sci">
+        <li><a href="#"><img src="./images/facebook.png" alt="image"></a></li>
+        <li><a href="#"><img src="./images/twitter.png" alt="image"></a></li>
+        <li><a href="#"><img src="./images/instagram.png" alt="image"></a></li>
+        </ul>
+        <div class="navigation">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Réservation</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="trailer">
+        <video src="./images/clip.mp4" controls="true"></video>
+        <img class="close" src="./images/close.png" alt="image" onclick="videoToggle();">
+    </div>
+    <script type="text/javascript">
+       function toggleMenu(){
+           const menuToggle = document.querySelector('.toggle');
+           const navigation = document.querySelector('.navigation');
+           menuToggle.classList.toggle('active')
+           navigation.classList.toggle('active')
+       }
+       function videoToggle(){
+           const trailer = document.querySelector('.trailer');
+           const video = document.querySelector('.video');
+           trailer.classList.toggle('active');
+           video.currentTime = 0;
+           video.pause();
+       }
+    </script>
+</body>
+</html>
